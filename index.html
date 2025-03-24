@@ -3,309 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sadman Sakib Khan | Materials Engineer | BUET</title>
+    <title>Sadman Sakib Khan | Materials Engineer | BUET Graduate | Polymer Composites Researcher</title>
+    <meta name="description" content="Sadman Sakib Khan - Materials and Metallurgical Engineering graduate from BUET with expertise in polymer composites, materials analysis, and quality control.">
+    <meta name="keywords" content="Materials Engineer, BUET Graduate, Polymer Composites, Metallurgical Engineering, Quality Control, NDT">
+    <meta name="author" content="Sadman Sakib Khan">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Sadman Sakib Khan | Materials Engineer | BUET Graduate">
+    <meta property="og:description" content="Materials and Metallurgical Engineering graduate with expertise in polymer composites and materials analysis.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourportfolio.com">
+    <meta property="og:image" content="https://yourportfolio.com/images/preview.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sadman Sakib Khan | Materials Engineer | BUET Graduate">
+    <meta name="twitter:description" content="Materials and Metallurgical Engineering graduate with expertise in polymer composites and materials analysis.">
+    <meta name="twitter:image" content="https://yourportfolio.com/images/preview.jpg">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #ecf0f1;
-            --dark: #2c3e50;
-            --text: #333;
-            --text-light: #7f8c8d;
-            --bg: #f9f9f9;
-            --card-bg: white;
-            --header-bg: linear-gradient(135deg, var(--primary), var(--secondary));
-            --contact-bg: var(--dark);
-            --footer-bg: var(--primary);
-            --timeline-bg: var(--secondary);
-            --skill-bg: var(--light);
-            --skill-color: var(--primary);
-            --skill-highlight-bg: var(--secondary);
-            --skill-highlight-color: white;
-        }
-
-        [data-theme="dark"] {
-            --primary: #3498db;
-            --secondary: #2c3e50;
-            --accent: #e74c3c;
-            --light: #34495e;
-            --dark: #2c3e50;
-            --text: #ecf0f1;
-            --text-light: #bdc3c7;
-            --bg: #1a1a1a;
-            --card-bg: #2d3436;
-            --header-bg: linear-gradient(135deg, #1a1a1a, #2c3e50);
-            --contact-bg: #1a1a1a;
-            --footer-bg: #1a1a1a;
-            --timeline-bg: var(--primary);
-            --skill-bg: #34495e;
-            --skill-color: #ecf0f1;
-            --skill-highlight-bg: var(--primary);
-            --skill-highlight-color: white;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        header {
-            background: var(--header-bg);
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            transition: background 0.3s;
-        }
-
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80') center/cover;
-            opacity: 0.2;
-            z-index: 0;
-        }
-
-        header .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            font-weight: 700;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin: 0.5rem 0 0;
-            opacity: 0.9;
-        }
-
-        .theme-toggle {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-            color: white;
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-            z-index: 10;
-        }
-
-        .theme-toggle:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: scale(1.1);
-        }
-
-        .contact-bar {
-            background-color: var(--contact-bg);
-            color: white;
-            padding: 0.8rem 0;
-            text-align: center;
-            transition: background-color 0.3s;
-        }
-
-        .contact-bar a {
-            color: white;
-            margin: 0 1rem;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .contact-bar a:hover {
-            color: var(--secondary);
-        }
-
-        .contact-bar i {
-            margin-right: 0.5rem;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            overflow: hidden;
-            padding: 0 1rem;
-        }
-
-        section {
-            background: var(--card-bg);
-            padding: 2rem;
-            margin: 1.5rem 0;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-        }
-
-        section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: var(--primary);
-            position: relative;
-            padding-bottom: 0.5rem;
-            margin-top: 0;
-            transition: color 0.3s;
-        }
-
-        h2::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background-color: var(--secondary);
-            transition: background-color 0.3s;
-        }
-
-        ul {
-            padding-left: 1.2rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .skill-tag {
-            background-color: var(--skill-bg);
-            color: var(--skill-color);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-        }
-
-        .skill-tag.highlight {
-            background-color: var(--skill-highlight-bg);
-            color: var(--skill-highlight-color);
-        }
-
-        .timeline {
-            position: relative;
-            padding-left: 2rem;
-        }
-
-        .timeline::before {
-            content: "";
-            position: absolute;
-            left: 7px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background-color: var(--timeline-bg);
-            transition: background-color 0.3s;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 2rem;
-        }
-
-        .timeline-item::before {
-            content: "";
-            position: absolute;
-            left: -2rem;
-            top: 0.3rem;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: var(--timeline-bg);
-            border: 2px solid var(--card-bg);
-            box-shadow: 0 0 0 2px var(--timeline-bg);
-            transition: background-color 0.3s, border-color 0.3s;
-        }
-
-        .timeline-date {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-bottom: 0.3rem;
-            transition: color 0.3s;
-        }
-
-        .timeline-title {
-            font-weight: 600;
-            margin-bottom: 0.3rem;
-        }
-
-        .timeline-description {
-            color: var(--text-light);
-            transition: color 0.3s;
-        }
-
-        footer {
-            background-color: var(--footer-bg);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-            transition: background-color 0.3s;
-        }
-
-        .social-links {
-            margin: 1rem 0;
-        }
-
-        .social-links a {
-            color: white;
-            margin: 0 0.5rem;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: var(--secondary);
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            header p {
-                font-size: 1rem;
-            }
-            
-            .contact-bar a {
-                display: block;
-                margin: 0.5rem 0;
-            }
-            
-            section {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
@@ -323,7 +40,7 @@
         <div class="container">
             <a href="tel:+8801799603608"><i class="fas fa-phone"></i> +8801799603608</a>
             <a href="mailto:sadmansakibkhan3608@gmail.com"><i class="fas fa-envelope"></i> sadmansakibkhan3608@gmail.com</a>
-            <a href="https://www.linkedin.com/in/sadman-sakib-khan" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://www.linkedin.com/in/sadman-sakib-khan" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
             <a href="#"><i class="fas fa-map-marker-alt"></i> Mymensingh, Bangladesh</a>
         </div>
     </div>
@@ -494,55 +211,14 @@
         <div class="container">
             <h3>Let's Connect</h3>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/sadman-sakib-khan" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="mailto:sadmansakibkhan3608@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="tel:+8801799603608"><i class="fas fa-phone"></i></a>
+                <a href="https://www.linkedin.com/in/sadman-sakib-khan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:sadmansakibkhan3608@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+8801799603608" aria-label="Phone"><i class="fas fa-phone"></i></a>
             </div>
-            <p>&copy; 2025 Sadman Sakib Khan. All rights reserved.</p>
+            <p>&copy; <span id="currentYear"></span> Sadman Sakib Khan. All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-        
-        // Check for saved theme preference or use preferred color scheme
-        const savedTheme = localStorage.getItem('theme') || 
-                         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        
-        // Apply the saved theme
-        if (savedTheme === 'dark') {
-            body.setAttribute('data-theme', 'dark');
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        }
-        
-        // Toggle theme on button click
-        themeToggle.addEventListener('click', () => {
-            if (body.getAttribute('data-theme') === 'dark') {
-                body.removeAttribute('data-theme');
-                localStorage.setItem('theme', 'light');
-                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-            } else {
-                body.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-            }
-        });
-        
-        // Listen for system theme changes
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-            if (!localStorage.getItem('theme')) { // Only if user hasn't set a preference
-                const newTheme = e.matches ? 'dark' : 'light';
-                if (newTheme === 'dark') {
-                    body.setAttribute('data-theme', 'dark');
-                    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-                } else {
-                    body.removeAttribute('data-theme');
-                    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-                }
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
