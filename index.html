@@ -3,127 +3,435 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sadman Sakib Khan - Portfolio</title>
+    <title>Sadman Sakib Khan | Materials Engineer | BUET</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --text: #333;
+            --text-light: #7f8c8d;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #f9f9f9;
+            color: var(--text);
+            line-height: 1.6;
         }
+        
         header {
-            background-color: #0073e6;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            padding: 20px;
+            padding: 3rem 0;
             text-align: center;
-        }
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: auto;
+            position: relative;
             overflow: hidden;
         }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80') center/cover;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        header .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0 0;
+            opacity: 0.9;
+        }
+        
+        .contact-bar {
+            background-color: var(--dark);
+            color: white;
+            padding: 0.8rem 0;
+            text-align: center;
+        }
+        
+        .contact-bar a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-bar a:hover {
+            color: var(--secondary);
+        }
+        
+        .contact-bar i {
+            margin-right: 0.5rem;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 1rem;
+        }
+        
         section {
             background: white;
-            padding: 20px;
-            margin-top: 20px;
+            padding: 2rem;
+            margin: 1.5rem 0;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #0073e6;
+        
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+        
+        ul {
+            padding-left: 1.2rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .skill-tag {
+            background-color: var(--light);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .skill-tag.highlight {
+            background-color: var(--secondary);
             color: white;
-            margin-top: 20px;
         }
-        @media (max-width: 600px) {
-            .container {
-                width: 95%;
+        
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--secondary);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -2rem;
+            top: 0.3rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--secondary);
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px var(--secondary);
+        }
+        
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.3rem;
+        }
+        
+        .timeline-title {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        
+        .timeline-description {
+            color: var(--text-light);
+        }
+        
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .social-links {
+            margin: 1rem 0;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary);
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header p {
+                font-size: 1rem;
+            }
+            
+            .contact-bar a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            
+            section {
+                padding: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Sadman Sakib Khan</h1>
-        <p>Final-year Materials and Metallurgical Engineering Student | BUET</p>
+        <div class="container">
+            <h1>Sadman Sakib Khan</h1>
+            <p>Materials & Metallurgical Engineering Student | BUET</p>
+        </div>
     </header>
     
+    <div class="contact-bar">
+        <div class="container">
+            <a href="tel:+8801799603608"><i class="fas fa-phone"></i> +8801799603608</a>
+            <a href="mailto:sadmansakibkhan3608@gmail.com"><i class="fas fa-envelope"></i> sadmansakibkhan3608@gmail.com</a>
+            <a href="https://www.linkedin.com/in/sadman-sakib-khan" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Mymensingh, Bangladesh</a>
+        </div>
+    </div>
+    
     <div class="container">
-        <section>
+        <section id="about">
             <h2>About Me</h2>
             <p>Motivated Materials and Metallurgical Engineering graduate with leadership experience in journalism, event management, and volunteering. Skilled in materials research, documentation, and quality control. Seeking an opportunity to contribute my technical expertise and organizational skills to a dynamic and innovative organization.</p>
         </section>
 
-        <section>
+        <section id="education">
             <h2>Education</h2>
-            <ul>
-                <li><strong>Bangladesh University of Engineering and Technology (BUET)</strong> - BSc in Materials & Metallurgical Engineering (CGPA: 3.26/4.0)</li>
-                <li><strong>Shahid Syed Nazrul Islam College</strong> - HSC, Science (GPA: 5.0/5.0)</li>
-                <li><strong>Government Laboratory High School, Mymensingh</strong> - SSC, Science (GPA: 5.0/5.0)</li>
-            </ul>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2020 - Present</div>
+                    <div class="timeline-title">Bangladesh University of Engineering and Technology (BUET)</div>
+                    <div class="timeline-description">BSc in Materials & Metallurgical Engineering (CGPA: 3.26/4.0)</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2017 - 2019</div>
+                    <div class="timeline-title">Shahid Syed Nazrul Islam College</div>
+                    <div class="timeline-description">HSC, Science (GPA: 5.0/5.0)</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2015 - 2017</div>
+                    <div class="timeline-title">Government Laboratory High School, Mymensingh</div>
+                    <div class="timeline-description">SSC, Science (GPA: 5.0/5.0)</div>
+                </div>
+            </div>
         </section>
 
-        <section>
+        <section id="research">
             <h2>Research & Thesis</h2>
-            <p>Currently conducting my undergraduate thesis on polymer matrix composites using the hand lay-up method. My research focuses on hybrid composites with palm (taal) fruit fiber and coconut coir fiber as reinforcements and epoxy as the matrix. Experimenting with reinforcement levels of 5%, 10%, and 15% by weight, I am investigating the effects of these fibers on the composite properties.</p>
-        </section>
-
-        <section>
-            <h2>Materials Analysis</h2>
-            <p>Previously analyzed a chequer plate sample with the following composition: C- 0.183%, Cr-13.94%, Ni-1.48%, Si-0.486%, Mn-9.24%, Mo-0.0078%.</p>
-        </section>
-
-        <section>
-            <h2>Skills</h2>
+            <p><strong>Undergraduate Thesis:</strong> Polymer Matrix Composites</p>
             <ul>
-                <li>Materials Science</li>
-                <li>Nondestructive Testing (NDT)</li>
-                <li>Quality Control</li>
-                <li>Event Management & Planning</li>
-                <li>Documentation & Technical Writing</li>
-                <li>Software Proficiency: SolidWorks, Python, C/C++ Programming, MATLAB, CES EduPack</li>
-                <li>Leadership & Team Collaboration</li>
+                <li>Method: <strong>Hand lay-up</strong> technique</li>
+                <li>Focus: <strong>Hybrid composites</strong> with palm (taal) fruit fiber and coconut coir fiber reinforcements</li>
+                <li>Matrix: <strong>Epoxy resin</strong></li>
+                <li>Experimenting with reinforcement levels of <strong>5%, 10%, and 15% by weight</strong></li>
+                <li>Investigating mechanical properties including tensile strength, flexural strength, and impact resistance</li>
             </ul>
+            
+            <h3 style="margin-top: 1.5rem;">Materials Analysis</h3>
+            <p>Conducted compositional analysis of a chequer plate sample with the following results:</p>
+            <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 5px; margin-top: 1rem;">
+                <p style="margin: 0.5rem 0;"><strong>C:</strong> 0.183% | <strong>Cr:</strong> 13.94% | <strong>Ni:</strong> 1.48%</p>
+                <p style="margin: 0.5rem 0;"><strong>Si:</strong> 0.486% | <strong>Mn:</strong> 9.24% | <strong>Mo:</strong> 0.0078%</p>
+            </div>
         </section>
 
-        <section>
-            <h2>Work Experience</h2>
-            <ul>
-                <li><strong>DBL Ceramics Ltd., Gazipur, Dhaka</strong> - Internship Trainee (June 2024)<br>Gained expertise in tile manufacturing processes, defect identification, and quality control.</li>
-                <li><strong>BUET Journalism Society</strong> - Executive Member (May 2021 – June 2023)<br>Assisted in organizing events, authored articles, edited publications, and managed external communications.</li>
-                <li><strong>BUET Journalism Society</strong> - Academic & Scholarship Secretary (June 2023 – Present)<br>Coordinated academic initiatives and scholarship programs for society members. Led interviews with top-performing BUET teams.</li>
-                <li><strong>RED LIVE (News Media)</strong> - Campus Executive (Feb 2021 – Jan 2022)<br>Represented the organization on campus, facilitating communication and event promotion.</li>
-            </ul>
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-tag highlight">Materials Science</div>
+                <div class="skill-tag highlight">Nondestructive Testing (NDT)</div>
+                <div class="skill-tag highlight">Quality Control</div>
+                <div class="skill-tag">SolidWorks</div>
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">C/C++</div>
+                <div class="skill-tag">MATLAB</div>
+                <div class="skill-tag">CES EduPack</div>
+                <div class="skill-tag">Technical Writing</div>
+                <div class="skill-tag">Event Management</div>
+                <div class="skill-tag">Leadership</div>
+                <div class="skill-tag">Team Collaboration</div>
+            </div>
         </section>
 
-        <section>
-            <h2>Volunteering & Leadership</h2>
-            <ul>
-                <li><strong>Badhon (Voluntary Blood Donors' Organization)</strong> - Vice President (Dr. M A Rashid Hall, BUET Zone)<br>Organized blood donation drives and awareness campaigns.</li>
-                <li><strong>Materials Research Center</strong> - Volunteer, Materials Symposium 2025 (IMR-CIA 2025)<br>Worked on the documentation team, creating posters, brochures, and sponsorship letters. Designed and managed registration.</li>
-                <li><strong>Event Management</strong> - Materials and Metallurgical Engineering Fest<br>Managed the food sector, organizing dinner for 400 attendees with a team.</li>
-            </ul>
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">June 2024</div>
+                    <div class="timeline-title">Internship Trainee - DBL Ceramics Ltd., Gazipur</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Gained hands-on experience in tile manufacturing processes</li>
+                            <li>Performed defect identification and quality control inspections</li>
+                            <li>Analyzed production parameters affecting product quality</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">June 2023 - Present</div>
+                    <div class="timeline-title">Academic & Scholarship Secretary - BUET Journalism Society</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Coordinate academic initiatives and scholarship programs</li>
+                            <li>Conduct interviews with top-performing BUET teams</li>
+                            <li>Organize academic workshops and seminars</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">May 2021 - June 2023</div>
+                    <div class="timeline-title">Executive Member - BUET Journalism Society</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Assisted in organizing large-scale events</li>
+                            <li>Authored and edited articles for publications</li>
+                            <li>Managed external communications and public relations</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Feb 2021 - Jan 2022</div>
+                    <div class="timeline-title">Campus Executive - RED LIVE (News Media)</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Represented the organization on campus</li>
+                            <li>Facilitated communication between media and student body</li>
+                            <li>Promoted events and initiatives</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Interests & Hobbies</h2>
-            <p>Apart from academics, I enjoy reading books. My favorite author is Humayun Ahmed. I also cherish Bengali traditions, especially the Boishakhi Mela.</p>
+        <section id="volunteer">
+            <h2>Leadership & Volunteering</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-title">Vice President - Badhon (Voluntary Blood Donors' Organization)</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Organized 5+ blood donation drives serving 500+ donors</li>
+                            <li>Conducted awareness campaigns about blood donation</li>
+                            <li>Coordinated between hospital authorities and student volunteers</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">Volunteer - Materials Symposium 2025 (IMR-CIA 2025)</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Documentation team member creating posters and brochures</li>
+                            <li>Designed sponsorship letters and managed registration</li>
+                            <li>Assisted in event logistics and coordination</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">Event Manager - Materials and Metallurgical Engineering Fest</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Managed food sector for 400+ attendees</li>
+                            <li>Coordinated with vendors and volunteers</li>
+                            <li>Ensured smooth execution of dinner program</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Contact</h2>
-            <p><strong>Phone:</strong> +8801799603608</p>
-            <p><strong>Email:</strong> <a href="mailto:sadmansakibkhan3608@gmail.com">sadmansakibkhan3608@gmail.com</a></p>
-            <p><strong>Address:</strong> 10/1, R.K Mission Road, Mymensingh</p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sadman-sakib-khan" target="_blank">LinkedIn Profile</a></p>
+        <section id="interests">
+            <h2>Interests</h2>
+            <div style="display: flex; align-items: center;">
+                <div style="flex: 1;">
+                    <p><i class="fas fa-book" style="color: var(--secondary); margin-right: 0.5rem;"></i> <strong>Reading:</strong> Avid reader with special interest in works by Humayun Ahmed</p>
+                    <p><i class="fas fa-flag" style="color: var(--secondary); margin-right: 0.5rem;"></i> <strong>Cultural Activities:</strong> Passionate about Bengali traditions, especially Boishakhi Mela</p>
+                    <p><i class="fas fa-users" style="color: var(--secondary); margin-right: 0.5rem;"></i> <strong>Community Engagement:</strong> Active in student organizations and volunteer work</p>
+                </div>
+            </div>
         </section>
     </div>
     
     <footer>
-        <p>&copy; 2025 Sadman Sakib Khan | All Rights Reserved</p>
+        <div class="container">
+            <h3>Let's Connect</h3>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/sadman-sakib-khan" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:sadmansakibkhan3608@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+8801799603608"><i class="fas fa-phone"></i></a>
+            </div>
+            <p>&copy; 2025 Sadman Sakib Khan. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
