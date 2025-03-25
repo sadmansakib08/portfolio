@@ -99,5 +99,3 @@ To use this README:
 3. Replace placeholder information with your actual details
 4. Add a real screenshot by replacing the placeholder image URL
 5. Customize any sections as needed
-
-This README provides comprehensive documentation for your portfolio while maintaining a clean, professional appearance that matches your portfolio's design aesthetic.
