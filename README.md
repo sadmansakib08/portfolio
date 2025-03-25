@@ -33,12 +33,22 @@ A responsive, modern portfolio website for Sadman Sakib Khan, showcasing his edu
 
 ```
 portfolio/
+├── css
+     ├──styles.css 
+├── js 
+    ├──script.js
 ├── index.html          # Main HTML file
 ├── styles.css          # All CSS styles
-├── script.js           # JavaScript functionality
+├──            # JavaScript functionality
 ├── assets/             # Additional assets
 │   ├── images/         # Project images
-│   └── docs/           # PDFs or other documents
+│   ├── docs/           # PDFs or other documents
+    ├── favicon/          # Favicon files
+    │   ├── favicon.ico
+    │   ├── favicon-16x16.png
+    │   ├── favicon-32x32.png
+    │   ├── apple-touch-icon.png
+    │   └── site.webmanifest           
 └── README.md           # This documentation file
 ```
 
